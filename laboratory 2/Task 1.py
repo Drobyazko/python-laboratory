@@ -1,4 +1,6 @@
-# Задача: Обчислити добуток 1/x^2+i
+"""""""""""
+Задача: Обчислити добуток 1/x^2+i
+"""""""""""
 from functools import reduce
 print("Enter your list")
 text = input()
