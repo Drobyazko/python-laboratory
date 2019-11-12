@@ -18,3 +18,4 @@ c = int(number[2])
 z = int(str(b) + str(c))
 x = 10*z+a
 print(x)
+
