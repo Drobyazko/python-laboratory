@@ -1,3 +1,4 @@
+# Підрахувати кількість додатних серед чисел а, b, с (ввести з клавіатури).
 i=0
 print ("Enter your first number for check")
 a = True
