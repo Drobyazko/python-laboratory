@@ -1,19 +1,22 @@
-text = ("А роза упала на лапу Азора")
-text = text.split(' ')
-print("Enter your n. "
-      "Or print 0 if you don't want to continue")
-n=1
-while n!=0:
-    n = int(input())
-    if n not in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]:
-        print("Change value")
-    else:
-        n = int(n)
-    n= int(n)
+""""""""
+"Програма має видалити літера а у слів, чия кількість літер = введеній"
+""""""""
+import re
+def number(num):
+    return bool(re.match('^\d+$',num))
+def number_new():
+    num = input('Enter number: ')
+    while not number(num):
+        num = input('Enter again: ')
+    return main(num, text)
+def main(num, text):
+    num = int(num)
+    text = text.split(' ')
     result = []
     for word in text:
-        if (len(word) == n):
+        if (len(word) == num):
             result.append(word.lower().replace("а",""))
         else: result.append(word)
-    print(' '.join(result))
-    result.clear()
+    return (' '.join(result))
+text = (input("Enter text: "))
+print(number_new())
