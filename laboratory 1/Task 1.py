@@ -17,21 +17,40 @@ print("Введіть додатє тризначне число")
 #             a = False
 
 
+# import re
+# user_input = input()
+# def number(x):
+#     pattern = "^(\d{3})$"
+#     while not re.match(pattern, user_input):
+#         user_input = input("Введене значення некоректне , Введіть число:")
+#     return number(user_input)
+#     print("Str is digit")
+#     return number(input())
+#     a = int(number[0])
+#     b = int(number[1])
+#     c = int(number[2])
+#     z = int(str(b) + str(c))
+#     x = 10*z+a
+#     return number(x)
+#
 import re
-def number(x):
-    pattern = "^(\d{3})$"
-    user_input = input()
-    while not re.match(pattern, user_input):
-        user_input = input("Введене значення некоректне , Введіть число:")
-    return number(user_input)
-    print ("Str is digit")
-    a = int(user_input[0])
-    b = int(user_input[1])
-    c = int(user_input[2])
+def number(num):
+    return bool(re.match('^\d{3}$',num))
+def number_new():
+    num = input('Enter number: ')
+    while not number(num):
+        num = input('Enter again: ')
+    return main(num)
+def main(num):
+    num=list(num)
+    # num[0],num[1],num[3]=num[1],num[3],num[0]
+    a = int(num[0])
+    b = int(num[1])
+    c = int(num[2])
     z = int(str(b) + str(c))
     x = 10*z+a
-    return number(input())
-print(number(input()))
-"""""""""""
+    return x
+print(number_new())
+"""""""""""    
 Програма написана для будь-якого тризначного числа. універсальна
 """""""""""
