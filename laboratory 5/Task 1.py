@@ -23,6 +23,17 @@ while n!=1:
 from functools import reduce
 def reducer(el_prev, el):
     return el_prev + el
-listik = input("Введіть список: ").split(' ')
+listik = input("Введіть строку: ").split(' ')
 a = reduce(reducer, listik)
 print(list(a))
+
+
+def sum(text):
+    list = text.split(' ')
+    result = []
+    for element in list:
+        for part in element:
+            result.append(part)
+    return result
+text = input("Enter: ")
+print(sum(text))
