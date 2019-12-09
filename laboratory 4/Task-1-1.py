@@ -1,4 +1,4 @@
-jear = {
+jearset = {
     1: {
         "winter": {
         "december": 31,
@@ -28,11 +28,12 @@ jear = {
         }
     }
 }
-def search(jear,key):
 
 n = 0
 while n != 1:
     m = int(input("Enter "))
-
+    def search(jearset, m):
+        return jearset[m]
+    print(search(jearset, m))
     print("Enter 1 to stop and 0 to continue")
     n = int(input())
