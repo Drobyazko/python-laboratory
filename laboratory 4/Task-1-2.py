@@ -1,3 +1,5 @@
+# Функція - Parse(s,t). Призначення - поділ рядка s на дві частини: до першого входження символу t і після нього.
+
 string = str(input("Enter text: "))
 t = str(input("Enter t: "))
 def parse(string, t):
