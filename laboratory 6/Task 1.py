@@ -15,10 +15,7 @@
 #     column('1', Integer, primary_key = True),
 #     column('2', digit),
 #     column('3', digit),
-#     column('4', di
-
-import numpy as np
-
+#     column('4'
 
 def search(massive):
     result = []
@@ -28,19 +25,19 @@ def search(massive):
         else: result.append(element)
     return result
 
-def correct(correct_massive):
+def correct(massive):
+    correct_massive = []
     for element in massive:
-        if bool(int(element)) == True:
+        if bool(element.isdigit()) == True:
             correct_massive.append(element)
-        else: new_element = input("Your enter isn't correct, enter number: ")
+        else:
+            new_element = input("Your enter isn't correct, enter number: ")
             correct_massive.append(new_element)
-        return correct_massive
-
+    return correct_massive
 
 n = 0
 while n!=1:
     massive = input("Enter massive space separated: ").split(" ")
-    correct_massive = []
-    massive = correct(correct_massive)
+    massive = correct(massive)
     print(search(massive))
-    n = input("Enter 0 if you want to continue or 1 if you want to stop: ")
+    n = 1
